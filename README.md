@@ -1,7 +1,7 @@
-# Viber Python Bot API
+# Python Bot API
 
 Use this library to develop a bot for Viber platform.
-The library is available on **[GitHub](https://github.com/Viber/viber-bot-python)** as well as a package on [PyPI](https://pypi.python.org/pypi/viberbot/).
+The library is available on **[GitHub](https://github.com/ivan-0224/Python-bot)** as well as a package on 
 
 This package can be imported using pip by adding the following to your `requirements.txt`:
 
@@ -11,13 +11,13 @@ viberbot==1.0.11
 
 ## License
 
-This library is released under the terms of the Apache 2.0 license. See [License](https://github.com/Viber/viber-bot-python/blob/master/LICENSE.md) for more information.
+This library is released under the terms of the Apache 2.0 license. See [License](https://github.com/Viber/ivan-0224/Python-bot/blob/master/LICENSE.md) for more information.
 
 ## Library Prerequisites
 
 1. python >= 2.7.0
 1. An Active Viber account on a platform which supports Public Accounts/ bots (iOS/Android). This account will automatically be set as the account administrator during the account creation process.
-1. Active Public Account/ bot - Create an account [here](https://developers.viber.com/docs/general/get-started).
+1. Active Public Account/ bot - Create an account [here](https://developers.ivan-0224.com/docs/general/get-started).
 1. Account authentication token - unique account identifier used to validate your account in all API requests. Once your account is created your authentication token will appear in the account’s “edit info” screen (for admins only). Each request posted to Viber by the account will need to contain the token.
 1. Webhook - Please use a server endpoint URL that supports HTTPS. If you deploy on your own custom server, you'll need a trusted (ca.pem) certificate, not self-signed. Read our [blog post](https://developers.viber.com/blog/2017/05/24/test-your-bots-locally) on how to test your bot locally.
 
@@ -48,7 +48,7 @@ Creating a basic Viber bot is simple:
 
 1. Install the library with pip `pip install viberbot`
 2. Import `viberbot.api` library to your project
-3. Create a Public Account or bot and use the API key from [https://developers.viber.com](https://developers.viber.com)
+3. Create a Public Account or bot and use the API key from [https://developers.ivan-0224.com](https://developers.ivan-0224.com)
 4. Configure your bot as described in the documentation below
 5. Start your web server
 6. Call `set_webhook(url)` with your web server url
@@ -63,7 +63,7 @@ from viberbot.api.bot_configuration import BotConfiguration
 
 bot_configuration = BotConfiguration(
 	name='PythonSampleBot',
-	avatar='http://viber.com/avatar.jpg',
+	avatar='http://ivan-0224.com/avatar.jpg',
 	auth_token='YOUR_AUTH_TOKEN_HERE'
 )
 viber = Api(bot_configuration)
@@ -308,7 +308,7 @@ viber_request = viber.parse_request(request.get_data())
 
 | Param | Type | Description |
 | --- | --- | --- |
-| to | `string` | Viber user id |
+| to | `string` |  user id |
 | messages | `list` | list of `Message` objects |
 
 Returns `list` of message tokens of the messages sent. 
@@ -324,7 +324,7 @@ tokens = viber.send_messages(to=viber_request.get_sender().get_id(),
 
 | Param | Type | Description |
 | --- | --- | --- |
-| sender | `string` | Viber user id |
+| sender | `string` |  user id |
 | messages | `list` | list of `Message` objects |
 
 Returns `list` of message tokens of the messages sent. 
